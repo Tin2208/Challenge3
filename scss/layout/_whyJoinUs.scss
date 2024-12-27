@@ -1,0 +1,177 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+.whyJoin {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1440px;
+    }
+
+    // background-image: url(/Images/whyJoinUs/decomobi.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 16px 16px 56px 16px;
+    background-position: 9px 292px;
+    position: relative;
+
+    @media(min-width:768px) {
+        padding: 160px 80px;
+        background-color: $color--third;
+
+    }
+
+    .whyJoin__content {
+        background-color: $color--fourth;
+
+        @media(min-width:768px) {
+            padding: 73px 80px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        @media (min-width:1024px) {
+            flex-direction: unset;
+        }
+
+        padding: 32px 16px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 0px #00000012,
+        0px 20px 25px -5px #0000001A;
+
+        .whyJoin__title {
+            @include columnFlex();
+            gap: 24px;
+
+            @media(min-width:768px) {
+                @include justifyCenter();
+            }
+
+            h2 {
+                @include textH2WhyJoinUs();
+
+                @media(min-width:768px) {
+                    @include fonth1();
+                }
+            }
+
+            ul {
+                list-style-type: none;
+                @include columnFlex();
+                gap: 8px;
+
+                li {}
+            }
+
+            .whyJoin_bnt {
+                @include justifyCenter();
+            }
+
+            .whyJoin__list {
+
+                .whyJoin__item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                    @include textPWhyJoinUs();
+
+                    @media(min-width:768px) {
+                        @include fontJoinUs();
+                        @include displayCenter();
+
+                        br {
+                            display: none
+                        }
+                    }
+                }
+            }
+
+            button {
+                @include cocllecrsBntSignUp();
+                background-color: unset;
+                z-index: 1;
+
+                @media(min-width:768px) {
+                    width: max-content;
+                }
+            }
+        }
+
+        .box {
+            .box--d {
+                @media(min-width:768px) {
+                    position: absolute;
+                    transform: translate(130px, 305px);
+                    max-width: none;
+                }
+
+                position: absolute;
+                transform: translate(40px, 215px);
+                max-width: 49px;
+            }
+        }
+
+        .whyJoin__media {
+            position: relative;
+            @include center();
+            border-radius: 20px;
+            z-index: 1;
+
+            .media__img {
+                @include center();
+                margin-top: 32px;
+                width: 100%;
+
+                @media(min-width:768px) {
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+
+                }
+            }
+        }
+
+        .img {
+            .img--desktop {
+                display: none;
+                position: absolute;
+                transform: translate(522px, -134px);
+                z-index: 0;
+
+                @media (max-width:376px) {
+                    display: none;
+                }
+
+                @media (min-width:768px) {
+                    display: block;
+                    transform: translate(-35px, -140px);
+                }
+
+
+            }
+
+            .img--mobile {
+                display: block;
+                transform: translate(-32px, -38px);
+                position: absolute;
+                width: 100%;
+
+                @media (min-width:768px) {
+                    display: none;
+                }
+            }
+
+
+        }
+
+
+    }
+}

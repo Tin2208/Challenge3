@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", serif;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+li,
+ul {
+  list-style: none;
+}/*# sourceMappingURL=shoes.css.map */

@@ -1,0 +1,245 @@
+@import '../base/variable';
+
+@mixin collecrsbnt {
+    border-radius: 8px;
+    font-family: $fontRoboto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $color--second;
+}
+
+
+
+@mixin displayCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin cocllecrsBntSignUp {
+    padding: 16px;
+    border: 2px solid #78350F;
+    color: #78350F;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: $fontRoboto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+@mixin cocllecrsBntWatch {
+    font-size: 16px;
+    font-family: $fontRoboto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #78350F;
+    display: flex;
+    border: none;
+}
+
+@mixin collecDisplay {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@mixin padding {
+    padding: 48px 16px;
+}
+
+@mixin columnFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin textH1TheBest {
+    font-family: $fontRoboto;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35.2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@mixin flexCollercs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+@mixin fonth1 {
+    font-family: $fontRoboto;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 61.6px;
+    text-align: center;
+
+}
+
+@mixin fontCollercs {
+    font-family: $fontRoboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: center;
+
+}
+
+
+@mixin imgCSS {
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin textH2TheBest {
+    font-family: $fontRoboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: left;
+    color: #ffffff;
+}
+
+@mixin textPTheBest {
+    font-family: $fontRoboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    color: #FFFFFF;
+
+}
+
+@mixin theBestBnt {
+    background-color: $color--fifth;
+    border-radius: 8px;
+    border: 2px solid $color--fourth;
+    color: $color--fourth;
+    padding: 16px 79.5px;
+}
+
+@mixin paddingDesktop {
+    padding: 80px;
+}
+
+@mixin flexColumnUnset {
+    display: flex;
+    flex-direction: unset;
+}
+
+@mixin justifyCenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin textH2WhyJoinUs {
+    font-family: $fontRoboto;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35.2px;
+    text-align: center;
+    color: $color--fifth;
+}
+
+@mixin textPWhyJoinUs {
+    font-family: $fontRoboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    color: $color--fifth;
+}
+
+@mixin fontJoinUs {
+    //styleName: Body/XL;
+    font-family: $fontRoboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $color--fifth;
+}
+
+@mixin fontTextShoes {
+    font-family: $fontRoboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-align: left;
+
+}
+
+@mixin textH1Shoes {
+    font-family: $fontRoboto;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52.8px;
+    text-align: center;
+    color: $color--sixth;
+
+}
+
+@mixin testPArticles {
+    font-family: $fontRoboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $color--second;
+}
+
+@mixin texth2Events {
+    font-family: $fontRoboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    color: $color--fourth;
+}
+
+@mixin bntEvents {
+    padding: 20px 24px;
+    font-family: $fontRoboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $color--fourth;
+    background-color: $color--fifth;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@mixin texth3Footer {
+    font-family: $fontRoboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17.6px;
+    text-align: center;
+    color: $color--fourth;
+}
+
+@mixin textFooter {
+    font-family: $fontRoboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    color: $color--seventh;
+
+}

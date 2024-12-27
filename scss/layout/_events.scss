@@ -1,0 +1,144 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+.events {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        padding: 48px 16px;
+        width: 100%;
+
+        background-image: url(/Images/events/background.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        @media (min-width:768px) {
+            padding: 40px;
+        }
+
+        @media (min-width:1000px) {
+            padding: 80px;
+
+        }
+
+        .events__header {
+            @include flexColumn();
+            margin-bottom: 48px;
+
+            @media (min-width:768px) {
+                flex-direction: unset;
+                justify-content: space-between;
+
+            }
+
+            h2 {
+                @include textH2WhyJoinUs();
+                margin-bottom: 20px;
+
+                @media (min-width:768px) {
+                    @include fonth1 ();
+                    color: $color--fifth;
+                }
+            }
+
+            a {
+                @include displayCenter ();
+                @include testPArticles();
+                column-gap: 16px;
+                text-align: center;
+
+            }
+        }
+
+        .events__list {
+
+            position: relative;
+
+            @media (min-width:768px) {
+                flex-direction: unset;
+                column-gap: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+            }
+
+            @media (min-width:1000px) {
+                flex-direction: unset;
+                column-gap: 24px;
+            }
+
+            @include columnFlex();
+            row-gap: 24px;
+
+            .events__card {
+                padding: 24px 16px 28px 16px;
+                background-color: $color--fourth;
+                box-shadow: 0px 0px 6px 0px #00000012, 0px 10px 15px -3px #0000001A;
+                border-radius: 10px;
+
+                @media (min-width:768px) {
+                    min-width: 302px;
+                }
+
+                .card__title {
+                    margin-bottom: 16px;
+
+                    p {
+                        @include testPArticles();
+                        color: $color--fifth;
+                    }
+
+                    h3 {
+                        @include textH2TheBest();
+                        color: $color--fifth;
+
+                    }
+                }
+
+
+            }
+
+            .card__img {
+                img {
+                    width: 100%;
+                    margin-bottom: 28px;
+
+                    @media (min-width:768px) {
+                        min-width: 270px;
+                    }
+
+                }
+            }
+
+            .card__ticket {
+                a {
+                    @include displayCenter ();
+                    @include testPArticles();
+                    column-gap: 16px;
+                }
+            }
+        }
+
+        .events__lights {
+            display: none;
+
+            @media (min-width:768px) {
+                display: block;
+                position: absolute;
+                // right: 0;
+                transform: translate(1175px, -20px);
+                z-index: 1;
+            }
+
+        }
+    }
+
+    background-color: #FEF3C7;
+
+
+
+
+}

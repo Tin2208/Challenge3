@@ -1,0 +1,79 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1440px;
+    }
+
+    @media (min-width:768px) {
+        padding: 30.5px 80.5px 30.5px 80px;
+        background-color: #fffbec;
+    }
+
+    padding: 16px 16px 0 16px;
+
+    .header__collecrs {
+        @include displayCenter();
+        justify-content: space-between;
+        font-family: $fontRoboto;
+
+        .header__logo {
+            .logo--span {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 35.2px;
+                text-align: left;
+                color: #78350F;
+
+            }
+        }
+
+        .header__menu {
+
+            .nav {
+                @media(min-width:768px) {
+                    list-style: none;
+                    gap: 16px;
+                    @include collecrsbnt();
+                    font-size: 16px;
+                    @include displayCenter();
+
+                }
+
+                display: none;
+
+
+                .bnt__header {
+                    @media(min-width:768px) {
+                        display: block;
+                    }
+
+                    @include collecrsbnt();
+                    padding: 12px;
+                    border: 2px solid $color--second;
+                    background-color: $color--third;
+                    font-size: 16px;
+
+                }
+
+            }
+
+            .menu--icon {
+                @media(min-width:768px) {
+                    display: none;
+
+
+                }
+            }
+
+        }
+    }
+}

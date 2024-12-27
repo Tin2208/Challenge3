@@ -1,0 +1,129 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+.shoes {
+    display: flex;
+    justify-content: center;
+
+    @media(min-width:768px) {}
+
+    .container {
+        width: 1440px;
+        background-color: $color--second;
+        position: relative;
+        background-image: url(/Images/shoes/chart.svg);
+        background-repeat: no-repeat;
+
+    }
+
+    .shoes__content {
+
+        @include flexColumn();
+        padding-top: 10px;
+        background-position: 11px 30px;
+
+        @media(min-width:768px) {
+            align-items: unset;
+            padding-top: 10px;
+            background-position: 195px 35px;
+        }
+
+        .shoes__media {
+            @media(min-width:768px) {
+                display: flex;
+                padding-left: 225px;
+            }
+
+            .shoes__notification {
+                @include flexColumn();
+                z-index: 2;
+
+                .shoes__notification--img {
+                    img {
+                        max-width: 256px;
+                        z-index: 2;
+                        position: relative;
+                    }
+
+                }
+
+                .shoes__notification--text {
+                    background-color: #E2E8F0;
+                    @include fontTextShoes();
+                    padding: 16px 16px 8px 16px;
+                    width: max-content;
+                    box-shadow: 0px 0px 15px 0px #00000012,
+                        0px 25px 50px -12px #00000040;
+                    border-radius: 5px;
+                    transform: translate(0, -10px);
+                    z-index: 1;
+                }
+
+                .shoes__notification--arrowDown {
+                    position: relative;
+                    top: -20px;
+                    z-index: 1;
+                }
+
+                .shoes__notification--circleBox {
+                    position: absolute;
+                    bottom: 58%;
+
+                }
+            }
+        }
+
+
+    }
+
+    .shoes__count {
+        padding-top: 6px;
+        padding-bottom: 310.5px;
+
+        h1 {
+            @include textH1Shoes();
+            position: relative;
+            z-index: 1;
+
+        }
+
+        p {
+            @include textH1TheBest();
+            color: $color--sixth;
+        }
+    }
+
+    .shoes__ellips {
+
+
+        @media(min-width:768px) {
+            top: 15%;
+            left: 28%;
+
+        }
+
+        position: absolute;
+        right: 5px;
+        bottom: 21%;
+        z-index: 0;
+
+        .ellips--img {
+            display: block;
+
+            @media (min-width:768px) {
+                display: none;
+            }
+        }
+
+        .ellipses--img {
+            display: none;
+
+            @media (min-width:768px) {
+                display: block;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,219 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+
+
+.cocllecrs {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-self: center;
+
+    .container {
+        max-width: 1440px;
+    }
+
+    @media (min-width:768px) {
+        background-color: $color--third;
+
+    }
+
+    .cocllecrs__content {
+        padding: 48px 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+
+
+        @media(min-width:768px) {
+
+            flex-direction: unset;
+            @include displayCenter();
+            @include paddingDesktop();
+            justify-content: space-between;
+
+        }
+
+        .collecrs__collectible {
+            @include flexCollercs();
+
+            .collectible__title {
+                @include flexCollercs();
+
+                h1 {
+                    @media(min-width:768px) {
+                        width: max-content;
+
+                    }
+
+                    @include fonth1();
+                    color: #0F172A;
+
+                }
+
+                p {
+                    @include fontCollercs();
+                    color: #0F172A;
+
+                    @media(min-width:768px) {
+                        width: 100%;
+                        text-align: left;
+
+                        br {
+                            display: none
+                        }
+                    }
+                }
+            }
+
+            .collectible__bnt {
+                @include displayCenter();
+                justify-content: space-between;
+                gap: 16px;
+
+                @media(min-width:768px) {
+                    justify-content: unset;
+                }
+
+                .bnt--signUp {
+                    @include cocllecrsBntSignUp();
+                    background-color: #ffffff;
+
+                    @media(min-width:768px) {
+                        background-color: $color--third;
+                    }
+
+                }
+
+                .bnt--watch {
+                    @include cocllecrsBntWatch();
+                    background-color: #ffffff;
+
+                    @media(min-width:768px) {
+                        background-color: $color--third;
+
+                    }
+
+                }
+            }
+        }
+
+        .collecrs__sneaker {
+            @media(min-width:768px) {
+                width: 50%;
+                display: contents;
+
+            }
+
+            .sneaker--img {
+                position: relative;
+                width: 100%;
+
+                @media(min-width:768px) {
+                    width: max-content;
+
+                }
+            }
+
+            .sneaker--bg {
+                position: absolute;
+                transform: translate(-17px, 37px);
+                z-index: -1;
+                left: 0;
+
+                @media(min-width:768px) {
+                    display: none;
+
+                }
+            }
+        }
+    }
+}
+
+.triangle {
+    position: absolute;
+    margin-top: 142px;
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+        z-index: 0;
+        right: 0;
+    }
+
+}
+
+.collecrs-footer {
+    @include padding();
+    text-align: center;
+    @include displayCenter();
+    flex-direction: column;
+    gap: 32px;
+    background-color: #FEF3C7;
+
+    @media(min-width:768px) {
+        @include flexColumnUnset();
+        @include paddingDesktop();
+        text-align: left;
+        justify-content: space-between;
+        background-color: unset;
+        z-index: 1;
+        position: relative;
+    }
+
+    .collecrs__items {
+        @include columnFlex();
+        gap: 16px;
+
+        .items__icon {
+            // display: flex;
+            position: relative;
+
+            .icon--nibhShadow {
+                position: absolute;
+                left: 165px;
+
+                @media(min-width:768px) {
+                    position: absolute;
+                    left: 25px;
+                }
+
+            }
+
+            .icon--cursusShadow {
+                position: absolute;
+                left: 162px;
+
+                @media(min-width:768px) {
+                    position: absolute;
+                    left: 24px;
+                }
+            }
+
+            .icon--ipsumShadow {
+                position: absolute;
+                left: 182px;
+
+                @media(min-width:768px) {
+                    position: absolute;
+                    left: 43px;
+                }
+            }
+        }
+
+        .items__text {
+            @include columnFlex();
+            gap: 16px;
+
+            p {
+                line-height: 27.5px;
+                font-size: 18px;
+            }
+
+        }
+    }
+}

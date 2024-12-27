@@ -1,0 +1,126 @@
+@import '../base/typography';
+@import '../base/variable';
+@import '../base/reset';
+@import '../base/mixin';
+
+
+.articles {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1440px;
+        padding: 48px 16px;
+        background-image: url(/Images/articles/background.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        @media (min-width:768px) {
+            padding: 42px;
+        }
+
+        @media (min-width:1000px) {
+            padding: 80px 80px;
+        }
+    }
+
+    .articles__header {
+        @media (min-width:768px) {
+            flex-direction: unset;
+            justify-content: space-between;
+        }
+
+        @include flexColumn();
+        margin-bottom: 44px;
+
+        h1 {
+            @media (min-width:768px) {
+                @include fonth1();
+            }
+
+            @include textH2WhyJoinUs();
+            margin-bottom: 20px
+        }
+
+        a {
+            @include displayCenter ();
+            @include testPArticles();
+            column-gap: 16px;
+
+        }
+    }
+
+    .articles__list {
+        @media (min-width:768px) {
+            display: flex;
+            column-gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width:1000px) {
+            display: flex;
+            column-gap: 24px;
+            flex-wrap: nowrap;
+        }
+
+        .articles__card {
+            box-shadow: 0px 0px 6px 0px #00000012,
+                0px 10px 15px -3px #0000001A;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            width: max-content;
+            margin-bottom: 24px;
+            background-color: $color--fourth;
+            width: 100%;
+
+            @media (min-width:768px) {
+                width: unset;
+
+            }
+
+            .article-card__img {
+                @media (min-width:768px) {
+                    width: 100%;
+                }
+
+                margin-bottom: 16px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                width: 100%;
+            }
+
+            .article-card__content {
+                @media (min-width:768px) {
+                    padding: 0 16px;
+                }
+
+                @media (min-width:1000px) {
+                    padding: 0 32px;
+                }
+
+                padding: 0 16px;
+
+                h3 {
+                    @include textH2TheBest();
+                    color: $color--fifth;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    @include textPTheBest();
+                    color: $color--fifth;
+                    margin-bottom: 28px;
+
+                }
+
+                a {
+                    @include displayCenter ();
+                    @include testPArticles();
+                    margin-bottom: 28px;
+                    column-gap: 16px;
+                }
+            }
+        }
+    }
+}
